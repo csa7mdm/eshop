@@ -1,0 +1,6 @@
+@AudioMemesPlatform.Backend.Api_HostAddress = http://localhost:5005
+
+GET {{AudioMemesPlatform.Backend.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
