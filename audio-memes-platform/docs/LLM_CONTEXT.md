@@ -8,6 +8,8 @@ The Audio Memes Platform is a web and mobile application designed for creating, 
 ### Backend
 - **Framework:** .NET 9
 - **Architecture:** Clean Architecture principles
+- **Key Libraries/Patterns:** Using xUnit for testing. MediatR for CQRS and Entity Framework Core for ORM are planned.
+- **Database:** Database to be decided (e.g., PostgreSQL, SQL Server, SQLite for development).
 - **Key Libraries/Patterns:** To be determined (e.g., MediatR for CQRS, Entity Framework Core for ORM, xUnit/NUnit for testing).
 - **Database:** To be determined (e.g., PostgreSQL, SQL Server, MongoDB).
 - **Deployment:** Docker, Kubernetes (target environment).
@@ -31,6 +33,35 @@ The Audio Memes Platform is a web and mobile application designed for creating, 
 - **Performance:** Optimize for fast load times and smooth interactions.
 - **Security:** Implement security best practices throughout the development lifecycle.
 
+## 3.1. Database Schema Design
+
+The following initial schema has been designed for core entities:
+
+### User Entity
+- **Id**: `GUID` (Primary Key)
+- **Username**: `string` (Unique, Indexed) - For login and display.
+- **Email**: `string` (Unique, Indexed) - For communication and account recovery.
+- **PasswordHash**: `string` - Hashed version of the user's password.
+- **Salt**: `string` - Unique salt used in password hashing for this user.
+- **CreatedAt**: `DateTime` (UTC) - Timestamp of user registration.
+- **UpdatedAt**: `DateTime` (UTC) - Timestamp of the last profile update.
+
+### MediaItem Entity
+- **Id**: `GUID` (Primary Key)
+- **UserId**: `GUID` (Foreign Key referencing User.Id, Indexed) - Links to the uploading user.
+- **Title**: `string` (Optional) - User-defined title for the media.
+- **Description**: `string` (Optional) - User-defined description.
+- **FileUrl**: `string` - URL to the actual media file (e.g., in cloud storage).
+- **ContentType**: `string` - MIME type of the file (e.g., "audio/mpeg", "audio/wav").
+- **FileSize**: `long` (in bytes) - Size of the media file.
+- **Duration**: `TimeSpan` - Length of the audio/video content.
+- **UploadedAt**: `DateTime` (UTC) - Timestamp of when the file was successfully uploaded and processed.
+- **CreatedAt**: `DateTime` (UTC) - Timestamp of entity creation.
+- **UpdatedAt**: `DateTime` (UTC) - Timestamp of the last entity update.
+
+### Relationships
+- **User to MediaItems**: One-to-Many. A single user can upload multiple media items.
+
 ## 4. Known Issues & Edge Cases
 - (To be populated as development progresses)
 - Example: Audio processing might have limitations with very large files on low-spec devices.
@@ -47,6 +78,10 @@ The Audio Memes Platform is a web and mobile application designed for creating, 
 ## 6. Code Generation & Style Guide
 - **General:** Follow standard coding conventions for each language/framework.
 - **.NET (Backend):**
+    - Use C# 12 features where appropriate (assuming .NET 9 defaults to C# 12 or allows its use).
+    - Follow Microsoft's C# Coding Conventions.
+    - Adhere to Clean Architecture principles (separation of concerns, dependency rule) - initial structure established.
+    - Solution and projects created using .NET 9 SDK (net9.0 target framework).
     - Use C# 12 features where appropriate.
     - Follow Microsoft's C# Coding Conventions.
     - Adhere to Clean Architecture principles (separation of concerns, dependency rule).

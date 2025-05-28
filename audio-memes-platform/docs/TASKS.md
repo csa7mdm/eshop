@@ -1,6 +1,16 @@
 # Task Management
 
 ## Backend Development
+- [✅] **Task:** Setup .NET 9 project scaffold (Initial)
+  - **Status:** ✅ Completed
+  - **Priority:** High
+  - **Dependencies:** None
+  - **Assignee:** Backend Team
+- [✅] **Task:** Design database schema (Phase 1)
+  - **Status:** ✅ Completed
+  - **Priority:** High
+  - **Dependencies:** Project Scaffold
+  - **Assignee:** Backend Team
 - [ ] **Task:** Setup .NET 9 project scaffold (Initial)
   - **Status:** 🔄 In Progress / ✅ Completed / ❌ Blocked
   - **Priority:** High
