@@ -10,6 +10,8 @@ The Audio Memes Platform is a web and mobile application designed for creating, 
 - **Architecture:** Clean Architecture principles
 - **Key Libraries/Patterns:** Using xUnit for testing. MediatR for CQRS and Entity Framework Core for ORM are planned.
 - **Database:** Database to be decided (e.g., PostgreSQL, SQL Server, SQLite for development).
+- **Key Libraries/Patterns:** To be determined (e.g., MediatR for CQRS, Entity Framework Core for ORM, xUnit/NUnit for testing).
+- **Database:** To be determined (e.g., PostgreSQL, SQL Server, MongoDB).
 - **Deployment:** Docker, Kubernetes (target environment).
 
 ### Web Frontend
@@ -80,6 +82,9 @@ The following initial schema has been designed for core entities:
     - Follow Microsoft's C# Coding Conventions.
     - Adhere to Clean Architecture principles (separation of concerns, dependency rule) - initial structure established.
     - Solution and projects created using .NET 9 SDK (net9.0 target framework).
+    - Use C# 12 features where appropriate.
+    - Follow Microsoft's C# Coding Conventions.
+    - Adhere to Clean Architecture principles (separation of concerns, dependency rule).
 - **React/Next.js (Frontend):**
     - Use functional components with Hooks.
     - Follow Airbnb JavaScript Style Guide (or a similar established guide).

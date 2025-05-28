@@ -14,7 +14,3 @@
   - Structured projects according to Clean Architecture principles.
   - Added xUnit test projects for Domain, Application, and Infrastructure layers under `backend/tests/`.
 - Designed initial database schema for `User` and `MediaItem` entities.
-
----
-
-*Follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) guidelines.*

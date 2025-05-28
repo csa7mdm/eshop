@@ -11,6 +11,16 @@
   - **Priority:** High
   - **Dependencies:** Project Scaffold
   - **Assignee:** Backend Team
+- [ ] **Task:** Setup .NET 9 project scaffold (Initial)
+  - **Status:** 🔄 In Progress / ✅ Completed / ❌ Blocked
+  - **Priority:** High
+  - **Dependencies:** None
+  - **Assignee:**
+- [ ] **Task:** Design database schema (Phase 1)
+  - **Status:** 🔄 In Progress / ✅ Completed / ❌ Blocked
+  - **Priority:** High
+  - **Dependencies:** Project Scaffold
+  - **Assignee:**
 - [ ] **Task:** Implement user authentication API endpoints (Phase 1)
   - **Status:** 🔄 In Progress / ✅ Completed / ❌ Blocked
   - **Priority:** High
